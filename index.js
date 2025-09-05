@@ -75,7 +75,7 @@
       
    // Typing effect
     const typing = document.getElementById('typing');
-    const phrases = ['accessible UIs', 'full‑stack apps', 'reusable components', 'scalable APIs'];
+    const phrases = ['accessible UIs', 'modern web apps', 'reusable components', 'scalable APIs','secure backend'];
     let pi = 0, ci = 0, deleting = false;
     function typeTick(){
       const current = phrases[pi];
