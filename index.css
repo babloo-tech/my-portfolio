@@ -1,0 +1,4 @@
+html {
+  scroll-behavior: smooth; /* keep smooth scroll */
+  scroll-padding-top: 100px; /*adjust your header height */
+}
