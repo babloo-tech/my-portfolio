@@ -32,33 +32,7 @@
         })
       })
 
-
-   // Optional: highlight nav on scroll
-    document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("main section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  const obs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.id;
-        if (entry.isIntersecting) {
-          navLinks.forEach((link) => {
-            link.classList.toggle(
-              "text-primary",
-              link.getAttribute("href") === "#" + id
-            );
-          });
-        }
-      });
-    },
-    { threshold: 0.45 }
-  );
-
-  sections.forEach((section) => obs.observe(section));
-});
-
-
+      
       // small enhancement: reduce header bg on scroll
       const header = document.querySelector('header')
       window.addEventListener('scroll', () => {
