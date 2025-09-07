@@ -90,10 +90,11 @@
         <p class="mt-2 text-lg"><span class="text-slate-500">I build</span> <span id="typing" class="font-semibold"></span></p>
 
         <div class="mt-8 flex flex-wrap items-center gap-3">
-          <a href="./image/babloo_resume.pdf" download class="inline-flex hover:bg-gray-800 items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-3 text-sm font-semibold shadow hover:shadow-lg transition">
+          <a id="resumeBtn" href="./image/babloo_resume.pdf" download class="inline-flex hover:bg-gray-800 items-center gap-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-5 py-3 text-sm font-semibold shadow hover:shadow-lg transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16l4-5h-3V4h-2v7H8l4 5z"/><path d="M4 18h16v2H4z"/></svg>
             Download Resume
           </a>
+          <div id="downloadMessage" class="hidden mt-1 text-green-500 font-semibold"></div>
           <a href="#projects" class="hover:bg-gray-800 inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-sm font-semibold hover:shadow-glow transition">View Projects</a>
           <div class="flex items-center gap-2 ml-2">
             <a href="https://github.com/babloo-tech"  class=" hover:bg-gray-800 p-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:shadow-glow" aria-label="GitHub" target="_blank" rel="noreferrer">
@@ -399,7 +400,7 @@
     >
       Send message
      </button>
-     <div id="result" class="text-green-500 mt-2" aria-live="polite"></div>
+     <div id="result" class="text-green-500 mt-2 hidden" aria-live="polite"></div>
     </div>
   </form>
 

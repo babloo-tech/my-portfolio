@@ -62,6 +62,23 @@
     }
     typeTick();
 
+//download resume message
+ document.addEventListener("DOMContentLoaded", () => {
+  const resumeBtn = document.getElementById("resumeBtn");
+  const downloadMessage = document.getElementById("downloadMessage");
+
+  resumeBtn.addEventListener("click", () => {
+    // Show success message
+    downloadMessage.textContent = "✅ Resume downloaded successfully!";
+    downloadMessage.classList.remove("hidden");
+
+    // Hide after 3 seconds
+    setTimeout(() => {
+      downloadMessage.classList.add("hidden");
+    }, 3000);
+  });
+});
+   
 // form accept data login
 const form = document.getElementById('contact-form');
 const result = document.getElementById('result');
@@ -69,7 +86,7 @@ const result = document.getElementById('result');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   result.textContent = 'Please wait...';
-
+  result.classList.remove("hidden");
   const formData = new FormData(form);
   const json = JSON.stringify(Object.fromEntries(formData));
 
@@ -80,8 +97,15 @@ form.addEventListener('submit', async (e) => {
       body: json
     });
     const data = await res.json();
+    // show success message
     result.textContent = data.message || (res.ok ? 'Sent!' : 'Error');
+    result.classList.remove("hidden");
     if (res.ok) form.reset();
+    // hide after 3 second
+      setTimeout(() => {
+      result.classList.add("hidden");
+    }, 3000);
+
   } catch (err) {
     result.textContent = 'Something went wrong!';
     console.error(err);
